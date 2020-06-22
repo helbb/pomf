@@ -11,7 +11,7 @@ var FindProxyForURL = function(init, profiles) {
 }("+auto", {
     "+auto": function(url, host, scheme) {
         "use strict";
-        if (/(?:^)\.granbluefantasy\.jp$/.test(host)) return "+proxy";
+        if (/(?:^|\.)granbluefantasy\.jp$/.test(host)) return "+proxy";
         if (/^gbf\.game-a\.mbga\.jp$/.test(host)) return "+proxy";
         return "DIRECT";
     },
