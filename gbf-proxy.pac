@@ -12,6 +12,7 @@ var FindProxyForURL = function(init, profiles) {
     "+auto": function(url, host, scheme) {
         "use strict";
         if (/\.granbluefantasy\.jp$/.test(host)) return "+proxy";
+        if (/\.granbluefantasy\.akamaized\.net$/.test(host)) return "+proxy"; //https://prd-game-a1-granbluefantasy.akamaized.net/assets_en/img_mid/sp/assets/npc/m/3040251000_02.jpg
         if (/^gbf\.game-a\.mbga\.jp$/.test(host)) return "+proxy";
         return "DIRECT";
     },
